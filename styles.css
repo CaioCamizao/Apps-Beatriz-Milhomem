@@ -1,106 +1,163 @@
+/* Definindo o estilo básico para a página */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    text-align: center;
-    padding: 20px 0;
-}
-
-h1 {
     color: #333;
 }
 
-.ebooks {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.ebook {
-    background: white;
-    padding: 15px;
-    width: 250px;
+header {
     text-align: center;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #0044cc;
+    color: white;
 }
 
-.ebook img {
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+/* Estilo da seção de livros */
+.book-collection {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Garante 5 livros por linha */
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.book {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    width: 100%;
+    max-width: 220px; /* Ajuste para garantir equilíbrio */
+}
+
+.book img {
     width: 100%;
     height: 300px;
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
-h3 {
+.book h3 {
     font-size: 18px;
-    margin: 10px 0;
+    margin-top: 10px;
+    color: #333;
 }
 
-.btn {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
+/* Estilo para os botões de download e conteúdo */
+.download-btn, .content-btn {
+    background-color: #0044cc;
+    color: white;
     border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 14px;
-    border-radius: 5px;
-    color: white;
+    margin-top: 10px;
+    font-size: 16px;
+    text-align: center;
 }
 
-.visualizar {
-    background: #007bff;
+.download-btn:hover, .content-btn:hover {
+    background-color: #003399;
 }
 
-.download {
-    background: #28a745;
+/* Estilo para o cadeado de livros bloqueados */
+.book .locked {
+    pointer-events: none;
+    opacity: 0.6;
 }
 
-.bloqueado {
-    position: relative;
+.book .locked img {
+    opacity: 0.5;
 }
 
-.bloqueio {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
+/* Estilo para a mensagem de livros bloqueados */
+.book p {
+    font-size: 16px;
+    color: #d9534f;
+    margin-top: 10px;
 }
 
-.bloqueado img {
-    filter: brightness(0.5);
-}
-
-.whatsapp-float {
+/* Estilo para o botão flutuante do WhatsApp */
+.whatsapp-icon {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: #25d366;
-    color: white;
-    font-size: 24px;
-    padding: 15px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-    text-decoration: none;
+    background-color: #25D366;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
 
-.whatsapp-float:hover {
-    background: #1ebe5d;
+.whatsapp-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 1024px) {
+    .book-collection {
+        grid-template-columns: repeat(4, 1fr); /* Ajusta para 4 livros por linha */
+    }
+}
+
+@media (max-width: 768px) {
+    .book-collection {
+        grid-template-columns: repeat(2, 1fr); /* Ajusta para 2 livros por linha */
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .book-collection {
+        grid-template-columns: 1fr; /* Apenas 1 livro por linha */
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    .whatsapp-icon {
+        width: 50px;
+        height: 50px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .whatsapp-icon img {
+        width: 30px;
+        height: 30px;
+    }
 }
