@@ -73,93 +73,90 @@ header p {
 /* Efeito de hover no livro */
 .book:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilo da imagem da capa */
+/* Imagem da capa do livro */
 .book img {
     width: 100%;
-    height: 200px; /* Altura fixa da imagem para a capa */
-    object-fit: cover; /* Garante que a imagem cubra toda a área */
-    border-bottom: 2px solid #eee;
-    border-radius: 8px 8px 0 0;
+    height: 180px; /* Garantindo que todas as imagens tenham a mesma altura */
+    object-fit: cover; /* Preenche a área sem distorcer */
+    border-bottom: 2px solid #f0f0f0;
 }
 
-/* Estilo do título do livro */
+/* Título do livro */
 .book h3 {
     font-size: 18px;
-    font-weight: bold;
-    margin: 10px 0;
     color: #333;
+    margin: 15px 0 10px;
 }
 
-/* Estilo do link do livro */
-.book a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* Estilo para o link do livro ao passar o mouse */
-.book a:hover h3 {
-    color: #007BFF;
-}
-
-/* Estilo do botão de download */
-.download-btn {
-    background-color: #28a745;
+/* Botões de download e conteúdo */
+button {
+    background-color: #2E3B4E;
     color: white;
     border: none;
     padding: 10px;
-    font-size: 16px;
-    cursor: pointer;
+    margin: 5px;
+    width: 100%;
     border-radius: 5px;
-    margin: 10px;
-    transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
-.download-btn:hover {
-    background-color: #218838;
+/* Alterando cor do botão de download e conteúdo */
+.download-btn {
+    background-color: #4CAF50; /* Verde para download */
 }
 
-/* Estilo para livros bloqueados (com cadeado) */
-.book.locked {
-    background-color: #f2f2f2;
-    border: 1px solid #ddd;
-    text-align: center;
-    padding: 20px;
+.content-btn {
+    background-color: #2196F3; /* Azul para conteúdo */
 }
 
-.locked-message {
+/* Estilo do cadeado (livros bloqueados) */
+.locked {
+    position: relative;
+    background-color: #e0e0e0; /* Cor de fundo diferente para livros bloqueados */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 20px;
+    border-radius: 8px;
 }
 
-.locked-message p {
-    font-size: 16px;
-    margin-bottom: 10px;
-    color: #d9534f; /* Cor de aviso para o texto */
+.locked .locked-message {
+    text-align: center;
 }
 
-.locked-message img {
+/* Estilo do ícone de cadeado */
+.locked img {
     width: 40px;
     height: 40px;
-    margin-top: 10px;
+    margin-bottom: 15px;
 }
 
-/* Estilo do botão do WhatsApp */
-.whatsapp-button {
+/* Estilo do botão de WhatsApp */
+.whatsapp-button a {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #25d366;
-    padding: 10px;
+    background-color: #25D366;
     border-radius: 50%;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .whatsapp-button img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
+}
+
+/* Botões de contato com o suporte */
+.whatsapp-btn {
+    background-color: #25D366;
+    font-size: 14px;
+    color: white;
+    margin-top: 10px;
+    padding: 10px 20px;
+    width: 100%;
 }
