@@ -3,73 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biblioteca Digital</title>
+    <title>Biblioteca de Ebooks</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>Biblioteca Digital</h1>
-        <p>Baixe ou visualize nossos eBooks</p>
-    </header>
-    <section class="book-collection">
-        <!-- Ebooks com download liberado -->
-        <div class="book">
-            <img src="imagens/livro1.jpg" alt="Livro 1">
-            <h3>Livro 1</h3>
-            <a href="downloads/livro1.pdf" class="download-btn" download>Baixar</a>
+    <div class="container">
+        <h1>Biblioteca de Ebooks</h1>
+        <div class="ebooks">
+            <!-- Livro 1 -->
+            <div class="ebook">
+                <img src="imagens/livro1.jpg" alt="Capa do Livro 1">
+                <h2>Título do Livro 1</h2>
+                <a href="#" class="btn">Ver Conteúdo</a>
+                <a href="downloads/livro1.pdf" class="btn download">Download</a>
+            </div>
+            <!-- Livro 2 -->
+            <div class="ebook">
+                <img src="imagens/livro2.jpg" alt="Capa do Livro 2">
+                <h2>Título do Livro 2</h2>
+                <a href="#" class="btn">Ver Conteúdo</a>
+                <a href="downloads/livro2.pdf" class="btn download">Download</a>
+            </div>
+            <!-- Livros Bloqueados -->
+            <div class="ebook bloqueado">
+                <img src="imagens/livro3.jpg" alt="Capa do Livro 3">
+                <h2>Título do Livro 3</h2>
+                <a href="#" class="btn">Ver Conteúdo</a>
+                <span class="cadeado"><i class="fas fa-lock"></i> Entre em contato com o suporte para download</span>
+            </div>
+            <div class="ebook bloqueado">
+                <img src="imagens/livro4.jpg" alt="Capa do Livro 4">
+                <h2>Título do Livro 4</h2>
+                <a href="#" class="btn">Ver Conteúdo</a>
+                <span class="cadeado"><i class="fas fa-lock"></i> Entre em contato com o suporte para download</span>
+            </div>
+            <div class="ebook bloqueado">
+                <img src="imagens/livro5.jpg" alt="Capa do Livro 5">
+                <h2>Título do Livro 5</h2>
+                <a href="#" class="btn">Ver Conteúdo</a>
+                <span class="cadeado"><i class="fas fa-lock"></i> Entre em contato com o suporte para download</span>
+            </div>
+            <div class="ebook bloqueado">
+                <img src="imagens/livro6.jpg" alt="Capa do Livro 6">
+                <h2>Título do Livro 6</h2>
+                <a href="#" class="btn">Ver Conteúdo</a>
+                <span class="cadeado"><i class="fas fa-lock"></i> Entre em contato com o suporte para download</span>
+            </div>
+            <div class="ebook bloqueado">
+                <img src="imagens/livro7.jpg" alt="Capa do Livro 7">
+                <h2>Título do Livro 7</h2>
+                <a href="#" class="btn">Ver Conteúdo</a>
+                <span class="cadeado"><i class="fas fa-lock"></i> Entre em contato com o suporte para download</span>
+            </div>
+            <div class="ebook bloqueado">
+                <img src="imagens/livro8.jpg" alt="Capa do Livro 8">
+                <h2>Título do Livro 8</h2>
+                <a href="#" class="btn">Ver Conteúdo</a>
+                <span class="cadeado"><i class="fas fa-lock"></i> Entre em contato com o suporte para download</span>
+            </div>
+            <div class="ebook bloqueado">
+                <img src="imagens/livro9.jpg" alt="Capa do Livro 9">
+                <h2>Título do Livro 9</h2>
+                <a href="#" class="btn">Ver Conteúdo</a>
+                <span class="cadeado"><i class="fas fa-lock"></i> Entre em contato com o suporte para download</span>
+            </div>
+            <div class="ebook bloqueado">
+                <img src="imagens/livro10.jpg" alt="Capa do Livro 10">
+                <h2>Título do Livro 10</h2>
+                <a href="#" class="btn">Ver Conteúdo</a>
+                <span class="cadeado"><i class="fas fa-lock"></i> Entre em contato com o suporte para download</span>
+            </div>
         </div>
-        <div class="book">
-            <img src="imagens/livro2.jpg" alt="Livro 2">
-            <h3>Livro 2</h3>
-            <a href="downloads/livro2.pdf" class="download-btn" download>Baixar</a>
-        </div>
-        
-        <!-- Ebooks bloqueados -->
-        <div class="book locked">
-            <img src="imagens/livro3.jpg" alt="Livro 3">
-            <h3>Livro 3</h3>
-            <p>Entre em contato com o suporte para download</p>
-        </div>
-        <div class="book locked">
-            <img src="imagens/livro4.jpg" alt="Livro 4">
-            <h3>Livro 4</h3>
-            <p>Entre em contato com o suporte para download</p>
-        </div>
-        <div class="book locked">
-            <img src="imagens/livro5.jpg" alt="Livro 5">
-            <h3>Livro 5</h3>
-            <p>Entre em contato com o suporte para download</p>
-        </div>
-        <div class="book locked">
-            <img src="imagens/livro6.jpg" alt="Livro 6">
-            <h3>Livro 6</h3>
-            <p>Entre em contato com o suporte para download</p>
-        </div>
-        <div class="book locked">
-            <img src="imagens/livro7.jpg" alt="Livro 7">
-            <h3>Livro 7</h3>
-            <p>Entre em contato com o suporte para download</p>
-        </div>
-        <div class="book locked">
-            <img src="imagens/livro8.jpg" alt="Livro 8">
-            <h3>Livro 8</h3>
-            <p>Entre em contato com o suporte para download</p>
-        </div>
-        <div class="book locked">
-            <img src="imagens/livro9.jpg" alt="Livro 9">
-            <h3>Livro 9</h3>
-            <p>Entre em contato com o suporte para download</p>
-        </div>
-        <div class="book locked">
-            <img src="imagens/livro10.jpg" alt="Livro 10">
-            <h3>Livro 10</h3>
-            <p>Entre em contato com o suporte para download</p>
-        </div>
-    </section>
-    
-    <!-- Botão Flutuante do WhatsApp -->
-    <a href="https://wa.me/11986724296" class="whatsapp-icon" target="_blank">
-        <img src="imagens/whatsapp.png" alt="WhatsApp">
+    </div>
+    <!-- Botão WhatsApp -->
+    <a href="https://wa.me/5511986724296" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
     </a>
 </body>
 </html>
