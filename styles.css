@@ -33,6 +33,7 @@ header p {
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 20px;
     padding: 20px;
+    justify-items: center; /* Garante que os livros fiquem centralizados */
 }
 
 .book {
@@ -42,6 +43,7 @@ header p {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     position: relative;
+    width: 100%; /* Faz com que as capas se ajustem ao tamanho */
 }
 
 .book img {
