@@ -66,10 +66,11 @@ header p {
     transform: translateY(-10px);
 }
 
-/* Imagem do livro */
+/* Ajustando a imagem do livro para ter o mesmo tamanho */
 .book img {
     width: 100%;
-    height: auto;
+    height: 200px; /* Define a altura fixa para todas as imagens */
+    object-fit: cover; /* Faz com que a imagem cubra todo o espaço, mantendo o corte proporcional */
     border-radius: 8px;
     margin-bottom: 15px;
 }
@@ -123,4 +124,26 @@ header p {
     font-size: 14px;
     margin-bottom: 10px;
     text-align: center;
+}
+
+/* Estilo específico para cadeados nos livros bloqueados */
+.locked-book {
+    position: relative;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para o ícone de cadeado */
+.locked-book .locked-icon {
+    color: #f44336; /* Cor vermelha */
+}
+
+/* Estilo para a mensagem de bloqueio */
+.locked-book .locked-message {
+    color: #f44336;
+    font-size: 14px;
+    margin-top: 10px;
 }
