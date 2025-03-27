@@ -13,22 +13,22 @@ html, body {
 /* Estilizando o body */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0;  /* Cor de fundo suave */
-    color: #333;  /* Cor do texto */
+    background-color: #f0f0f0;
+    color: #333;
     padding: 20px;
     line-height: 1.6;
-    overflow-x: hidden; /* Impede rolagem horizontal */
-    overflow-y: auto; /* Permite rolagem vertical */
-    display: flex; /* Flex para permitir layout correto */
-    flex-direction: column; /* Coloca conteúdo na direção vertical */
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Estilo do cabeçalho */
 header {
     text-align: center;
     margin-bottom: 30px;
-    background-color: #2E3B4E; /* Cor de fundo do cabeçalho */
-    color: white;  /* Cor do texto do cabeçalho */
+    background-color: #2E3B4E;
+    color: white;
     padding: 20px;
     border-radius: 8px;
 }
@@ -42,7 +42,7 @@ header h1 {
 /* Texto do cabeçalho */
 header p {
     font-size: 18px;
-    color: #d3d3d3; /* Cor mais suave para o texto */
+    color: #d3d3d3;
 }
 
 /* Estilizando a coleção de livros */
@@ -73,8 +73,8 @@ header p {
 /* Garantindo que todas as imagens tenham o mesmo tamanho */
 .book img {
     width: 100%;
-    height: 300px; /* Defina uma altura fixa para as imagens */
-    object-fit: cover; /* Garante que a imagem seja cortada corretamente para preencher o espaço */
+    height: 300px;
+    object-fit: cover;
     border-bottom: 2px solid #f4f4f9;
 }
 
@@ -102,6 +102,25 @@ header p {
 
 .download-btn:hover {
     background-color: #218838;
+}
+
+/* Estilizando o botão de ver resumo */
+.resume-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.resume-btn:hover {
+    background-color: #0056b3;
 }
 
 /* Estilizando links */
