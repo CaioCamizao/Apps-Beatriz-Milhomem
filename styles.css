@@ -17,10 +17,6 @@ body {
     color: #333;
     padding: 20px;
     line-height: 1.6;
-    overflow-x: hidden;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
 }
 
 /* Estilo do cabeçalho */
@@ -48,7 +44,7 @@ header p {
 /* Estilizando a coleção de livros */
 .book-collection {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
     justify-items: center;
     margin: 0 auto;
@@ -60,75 +56,58 @@ header p {
     background-color: #fff;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 220px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    transition: transform 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Garantindo que todas as imagens tenham o mesmo tamanho */
+.book:hover {
+    transform: scale(1.05);
+}
+
+/* Imagem do livro */
 .book img {
     width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-bottom: 2px solid #f4f4f9;
+    height: auto;
+    border-bottom: 2px solid #ddd;
 }
 
 /* Título do livro */
 .book h3 {
-    font-size: 1.2rem;
-    margin: 15px 0;
-    color: #007bff;
+    font-size: 18px;
+    margin: 10px 0;
 }
 
-/* Estilizando os botões de download */
-.download-btn {
-    background-color: #28a745;
-    color: white;
+/* Estilizando os botões */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.download-btn, .resume-btn {
     padding: 10px 20px;
-    font-size: 1rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
-    margin-bottom: 15px;
-    transition: background-color 0.3s ease;
+}
+
+.download-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.resume-btn {
+    background-color: #007BFF;
+    color: white;
 }
 
 .download-btn:hover {
-    background-color: #218838;
-}
-
-/* Estilizando o botão de ver resumo */
-.resume-btn {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
-    margin-bottom: 15px;
-    transition: background-color 0.3s ease;
+    background-color: #45a049;
 }
 
 .resume-btn:hover {
     background-color: #0056b3;
-}
-
-/* Estilizando links */
-a {
-    text-decoration: none;
-}
-
-a:focus,
-a:hover {
-    outline: none;
 }
