@@ -1,0 +1,106 @@
+/* Resetando algumas propriedades padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Garantir que o HTML e o BODY tenham altura total */
+html, body {
+    height: 100%;
+}
+
+/* Estilizando o body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;  /* Cor de fundo suave */
+    color: #333;  /* Cor do texto */
+    padding: 20px;
+    line-height: 1.6;
+    overflow-x: hidden; /* Impede rolagem horizontal */
+    overflow-y: auto; /* Permite rolagem vertical */
+    display: flex; /* Flex para permitir layout correto */
+    flex-direction: column; /* Coloca conteúdo na direção vertical */
+}
+
+/* Estilo do cabeçalho */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    background-color: #2E3B4E; /* Cor de fundo do cabeçalho */
+    color: white;  /* Cor do texto do cabeçalho */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Título do cabeçalho */
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+/* Texto do cabeçalho */
+header p {
+    font-size: 18px;
+    color: #d3d3d3; /* Cor mais suave para o texto */
+}
+
+/* Estilo da seção de livros */
+.book-collection {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    margin-top: 20px;
+    flex-grow: 1; /* Faz a seção de livros crescer conforme necessário */
+}
+
+/* Estilo individual dos livros */
+.book {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 250px;
+    height: 350px; /* Altura fixa para todos os livros */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column; /* Organiza o conteúdo do livro em coluna */
+    justify-content: space-between;
+}
+
+/* Efeito de hover no livro */
+.book:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo da imagem da capa */
+.book img {
+    width: 100%;
+    height: 200px; /* Altura fixa da imagem para a capa */
+    object-fit: cover; /* Garante que a imagem cubra toda a área */
+    border-bottom: 2px solid #eee;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Estilo do título do livro */
+.book h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #333;
+}
+
+/* Estilo do link do livro */
+.book a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Estilo para o link do livro ao passar o mouse */
+.book a:hover h3 {
+    color: #007BFF;
+}
