@@ -1,150 +1,110 @@
-/* Resetando algumas propriedades padrões */
-* {
+/* Estilo geral da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-/* Garantir que o HTML e o BODY tenham altura total */
-html, body {
-    height: 100%;
-}
-
-/* Estilizando o body */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
-    padding: 20px;
-    line-height: 1.6;
-}
-
-/* Estilo do cabeçalho */
 header {
     text-align: center;
-    margin-bottom: 30px;
-    background-color: #2E3B4E;
+    padding: 20px;
+    background-color: #444;
     color: white;
+}
+
+main {
     padding: 20px;
-    border-radius: 8px;
 }
 
-/* Título do cabeçalho */
-header h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
+h1 {
+    font-size: 2em;
 }
 
-/* Texto do cabeçalho */
-header p {
-    font-size: 18px;
-    color: #d3d3d3;
+p {
+    font-size: 1.2em;
 }
 
-/* Estilizando a coleção de livros */
 .book-collection {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     gap: 20px;
-    justify-items: center;
-    margin: 0 auto;
-    padding: 20px;
 }
 
-/* Estilizando cada livro */
 .book {
-    background-color: #fff;
+    width: 200px;
+    background-color: white;
     border-radius: 8px;
-    overflow: hidden;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
     text-align: center;
-    padding: 20px;
-    transition: transform 0.3s ease;
+    padding: 10px;
 }
 
-/* Efeito de hover para os livros */
-.book:hover {
-    transform: translateY(-10px);
-}
-
-/* Ajustando a imagem do livro para garantir o mesmo tamanho */
 .book img {
     width: 100%;
-    height: 300px; /* Define a altura fixa para todas as imagens */
-    object-fit: cover; /* Faz com que a imagem cubra todo o espaço, mantendo o corte proporcional */
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
     border-radius: 8px;
-    margin-bottom: 15px;
 }
 
-/* Título do livro */
 .book h3 {
-    font-size: 18px;
-    margin-bottom: 15px;
-    color: #333;
+    font-size: 1.1em;
+    margin-top: 10px;
 }
 
-/* Estilo para os botões */
-.buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.download-btn, .resume-btn {
-    padding: 10px 20px;
-    margin: 5px;
-    border: none;
-    border-radius: 5px;
-    background-color: #2E3B4E;
+.download-btn {
+    background-color: #28a745;
     color: white;
-    font-size: 16px;
-    text-align: center;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
     text-decoration: none;
+    display: inline-block;
 }
 
-.download-btn:hover, .resume-btn:hover {
-    background-color: #1f2a3b;
+.download-btn:hover {
+    background-color: #218838;
 }
 
-/* Estilo para livros bloqueados */
-.buttons.locked {
+/* Mensagem de cadeado */
+.lock-message {
+    display: block;
+    margin-top: 10px;
+    color: #888;
+    font-size: 0.9em;
+}
+
+/* Estilo do botão de WhatsApp */
+.whatsapp-button {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 10px;
-    color: #aaa;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366; /* Cor do WhatsApp */
+    color: white;
+    padding: 15px 20px;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
 }
 
-.locked-icon {
-    font-size: 30px;
-    margin-bottom: 10px;
+/* Ícone do WhatsApp */
+.whatsapp-icon {
+    width: 30px;
+    margin-right: 10px;
 }
 
-.locked-message {
-    font-size: 14px;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-/* Estilo específico para cadeados nos livros bloqueados */
-.locked-book {
-    position: relative;
-    background-color: #f5f5f5;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Estilo para o ícone de cadeado */
-.locked-book .locked-icon {
-    color: #f44336; /* Cor vermelha */
-}
-
-/* Estilo para a mensagem de bloqueio */
-.locked-book .locked-message {
-    color: #f44336;
-    font-size: 14px;
-    margin-top: 10px;
+/* Efeito de hover para o botão */
+.whatsapp-button:hover {
+    background-color: #128C7E; /* Cor mais escura do WhatsApp */
 }
