@@ -1,38 +1,48 @@
-/* Resetando margens e paddings padrões */
+/* Resetando algumas propriedades padrões */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilizando o corpo da página */
+/* Garantir que o HTML e o BODY tenham altura total */
+html, body {
+    height: 100%;
+}
+
+/* Estilizando o body */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-    line-height: 1.6;
-}
-
-/* Estilizando o cabeçalho */
-header {
-    background-color: #007bff;
-    color: white;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;  /* Cor de fundo suave */
+    color: #333;  /* Cor do texto */
     padding: 20px;
-    text-align: center;
+    line-height: 1.6;
+    overflow-x: hidden; /* Impede rolagem horizontal */
+    overflow-y: auto; /* Permite rolagem vertical */
+    display: flex; /* Flex para permitir layout correto */
+    flex-direction: column; /* Coloca conteúdo na direção vertical */
 }
 
+/* Estilo do cabeçalho */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    background-color: #2E3B4E; /* Cor de fundo do cabeçalho */
+    color: white;  /* Cor do texto do cabeçalho */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Título do cabeçalho */
 header h1 {
-    font-size: 2.5rem;
+    font-size: 36px;
     margin-bottom: 10px;
 }
 
+/* Texto do cabeçalho */
 header p {
-    font-size: 1.2rem;
-}
-
-/* Estilizando a seção principal */
-main {
-    padding: 20px;
+    font-size: 18px;
+    color: #d3d3d3; /* Cor mais suave para o texto */
 }
 
 /* Estilizando a coleção de livros */
@@ -41,6 +51,8 @@ main {
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 20px;
     justify-items: center;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 /* Estilizando cada livro */
@@ -50,20 +62,19 @@ main {
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 250px;
+    max-width: 220px;
     text-align: center;
     transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.book:hover {
-    transform: scale(1.05);
-}
-
-/* Imagem do livro */
+/* Garantindo que todas as imagens tenham o mesmo tamanho */
 .book img {
     width: 100%;
-    height: auto;
-    object-fit: cover;
+    height: 300px; /* Defina uma altura fixa para as imagens */
+    object-fit: cover; /* Garante que a imagem seja cortada corretamente para preencher o espaço */
     border-bottom: 2px solid #f4f4f9;
 }
 
