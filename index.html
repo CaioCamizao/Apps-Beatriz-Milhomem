@@ -1,155 +1,75 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Livraria Digital</title>
-    <link rel="stylesheet" href="styles.css">
-    <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('service-worker.js')
-                .then(() => console.log("Service Worker Registrado"));
-        }
-    </script>
+    <title>Biblioteca Digital</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Conteúdo Digital Beatriz Milhomem</h1>
-        <p>Destrave suas maiores DÚVIDAS com os meus MELHORES CONTEÚDOS</p>
+        <h1>Biblioteca Digital</h1>
+        <p>Baixe ou visualize nossos eBooks</p>
     </header>
-
-    <main>
-        <section class="book-collection">
-            <!-- Livro 1 -->
-            <div class="book">
-                <a href="https://raw.githubusercontent.com/CaioCamizao/Apps-Beatriz-Milhomem/main/Ebooks/eBook_de_Teste.pdf" target="_blank">
-                    <img src="images/livro1.jpg" alt="Capa do Livro 1">
-                    <h3>O Poder do Hábito</h3>
-                </a>
-                <a href="https://raw.githubusercontent.com/CaioCamizao/Apps-Beatriz-Milhomem/main/Ebooks/eBook_de_Teste.pdf" download="O_Poder_do_Habito.pdf">
-                    <button class="download-btn">Baixar PDF</button>
-                </a>
-                <a href="https://raw.githubusercontent.com/CaioCamizao/Apps-Beatriz-Milhomem/main/Ebooks/eBook_de_Teste.pdf" target="_blank">
-                    <button class="content-btn">Ver o Conteúdo</button>
-                </a>
-            </div>
-
-            <!-- Livro 2 -->
-            <div class="book">
-                <a href="ebooks/livro2.pdf" target="_blank">
-                    <img src="images/livro2.jpg" alt="Capa do Livro 2">
-                    <h3>A Arte da Guerra</h3>
-                </a>
-                <a href="ebooks/livro2.pdf" download="A_Arte_da_Guerra.pdf">
-                    <button class="download-btn">Baixar PDF</button>
-                </a>
-                <a href="ebooks/livro2.pdf" target="_blank">
-                    <button class="content-btn">Ver o Conteúdo</button>
-                </a>
-            </div>
-
-            <!-- Livro 3 -->
-            <div class="book">
-                <a href="#" class="locked">
-                    <img src="images/livro3.jpg" alt="Capa do Livro 3">
-                    <h3>Desenvolvimento Pessoal</h3>
-                </a>
-                <p>Entre em contato com o suporte para download</p>
-                <a href="https://wa.me/5511986724296" target="_blank">
-                    <button class="content-btn">Ver o Conteúdo</button>
-                </a>
-            </div>
-
-            <!-- Livro 4 -->
-            <div class="book">
-                <a href="#" class="locked">
-                    <img src="images/livro4.jpg" alt="Capa do Livro 4">
-                    <h3>Como Vencer a Procrastinação</h3>
-                </a>
-                <p>Entre em contato com o suporte para download</p>
-                <a href="https://wa.me/5511986724296" target="_blank">
-                    <button class="content-btn">Ver o Conteúdo</button>
-                </a>
-            </div>
-
-            <!-- Livro 5 -->
-            <div class="book">
-                <a href="#" class="locked">
-                    <img src="images/livro5.jpg" alt="Capa do Livro 5">
-                    <h3>O Segredo da Mente Milionária</h3>
-                </a>
-                <p>Entre em contato com o suporte para download</p>
-                <a href="https://wa.me/5511986724296" target="_blank">
-                    <button class="content-btn">Ver o Conteúdo</button>
-                </a>
-            </div>
-
-            <!-- Livro 6 -->
-            <div class="book">
-                <a href="#" class="locked">
-                    <img src="images/livro6.jpg" alt="Capa do Livro 6">
-                    <h3>Inteligência Emocional</h3>
-                </a>
-                <p>Entre em contato com o suporte para download</p>
-                <a href="https://wa.me/5511986724296" target="_blank">
-                    <button class="content-btn">Ver o Conteúdo</button>
-                </a>
-            </div>
-
-            <!-- Livro 7 -->
-            <div class="book">
-                <a href="#" class="locked">
-                    <img src="images/livro7.jpg" alt="Capa do Livro 7">
-                    <h3>O Milagre da Manhã</h3>
-                </a>
-                <p>Entre em contato com o suporte para download</p>
-                <a href="https://wa.me/5511986724296" target="_blank">
-                    <button class="content-btn">Ver o Conteúdo</button>
-                </a>
-            </div>
-
-            <!-- Livro 8 -->
-            <div class="book">
-                <a href="#" class="locked">
-                    <img src="images/livro8.jpg" alt="Capa do Livro 8">
-                    <h3>Riqueza e Felicidade</h3>
-                </a>
-                <p>Entre em contato com o suporte para download</p>
-                <a href="https://wa.me/5511986724296" target="_blank">
-                    <button class="content-btn">Ver o Conteúdo</button>
-                </a>
-            </div>
-
-            <!-- Livro 9 -->
-            <div class="book">
-                <a href="#" class="locked">
-                    <img src="images/livro9.jpg" alt="Capa do Livro 9">
-                    <h3>A Magia da Organizar</h3>
-                </a>
-                <p>Entre em contato com o suporte para download</p>
-                <a href="https://wa.me/5511986724296" target="_blank">
-                    <button class="content-btn">Ver o Conteúdo</button>
-                </a>
-            </div>
-
-            <!-- Livro 10 -->
-            <div class="book">
-                <a href="#" class="locked">
-                    <img src="images/livro10.jpg" alt="Capa do Livro 10">
-                    <h3>Mindset de Sucesso</h3>
-                </a>
-                <p>Entre em contato com o suporte para download</p>
-                <a href="https://wa.me/5511986724296" target="_blank">
-                    <button class="content-btn">Ver o Conteúdo</button>
-                </a>
-            </div>
-        </section>
-    </main>
-
-    <!-- Botão flutuante do WhatsApp -->
-    <a href="https://wa.me/5511986724296" target="_blank">
-        <img src="images/whatsapp-icon.png" alt="WhatsApp" class="whatsapp-icon">
+    <section class="book-collection">
+        <!-- Ebooks com download liberado -->
+        <div class="book">
+            <img src="imagens/livro1.jpg" alt="Livro 1">
+            <h3>Livro 1</h3>
+            <a href="downloads/livro1.pdf" class="download-btn" download>Baixar</a>
+        </div>
+        <div class="book">
+            <img src="imagens/livro2.jpg" alt="Livro 2">
+            <h3>Livro 2</h3>
+            <a href="downloads/livro2.pdf" class="download-btn" download>Baixar</a>
+        </div>
+        
+        <!-- Ebooks bloqueados -->
+        <div class="book locked">
+            <img src="imagens/livro3.jpg" alt="Livro 3">
+            <h3>Livro 3</h3>
+            <p>Entre em contato com o suporte para download</p>
+        </div>
+        <div class="book locked">
+            <img src="imagens/livro4.jpg" alt="Livro 4">
+            <h3>Livro 4</h3>
+            <p>Entre em contato com o suporte para download</p>
+        </div>
+        <div class="book locked">
+            <img src="imagens/livro5.jpg" alt="Livro 5">
+            <h3>Livro 5</h3>
+            <p>Entre em contato com o suporte para download</p>
+        </div>
+        <div class="book locked">
+            <img src="imagens/livro6.jpg" alt="Livro 6">
+            <h3>Livro 6</h3>
+            <p>Entre em contato com o suporte para download</p>
+        </div>
+        <div class="book locked">
+            <img src="imagens/livro7.jpg" alt="Livro 7">
+            <h3>Livro 7</h3>
+            <p>Entre em contato com o suporte para download</p>
+        </div>
+        <div class="book locked">
+            <img src="imagens/livro8.jpg" alt="Livro 8">
+            <h3>Livro 8</h3>
+            <p>Entre em contato com o suporte para download</p>
+        </div>
+        <div class="book locked">
+            <img src="imagens/livro9.jpg" alt="Livro 9">
+            <h3>Livro 9</h3>
+            <p>Entre em contato com o suporte para download</p>
+        </div>
+        <div class="book locked">
+            <img src="imagens/livro10.jpg" alt="Livro 10">
+            <h3>Livro 10</h3>
+            <p>Entre em contato com o suporte para download</p>
+        </div>
+    </section>
+    
+    <!-- Botão Flutuante do WhatsApp -->
+    <a href="https://wa.me/11986724296" class="whatsapp-icon" target="_blank">
+        <img src="imagens/whatsapp.png" alt="WhatsApp">
     </a>
-
 </body>
 </html>
