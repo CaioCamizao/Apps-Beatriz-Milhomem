@@ -1,162 +1,154 @@
-/* Resetando algumas propriedades padrões */
+/* Definindo o estilo básico para a página */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Garantir que o HTML e o BODY tenham altura total */
-html, body {
-    height: 100%;
-}
-
-/* Estilizando o body */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0;  /* Cor de fundo suave */
-    color: #333;  /* Cor do texto */
-    padding: 20px;
-    line-height: 1.6;
-    overflow-x: hidden; /* Impede rolagem horizontal */
-    overflow-y: auto; /* Permite rolagem vertical */
-    display: flex; /* Flex para permitir layout correto */
-    flex-direction: column; /* Coloca conteúdo na direção vertical */
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-/* Estilo do cabeçalho */
 header {
     text-align: center;
-    margin-bottom: 30px;
-    background-color: #2E3B4E; /* Cor de fundo do cabeçalho */
-    color: white;  /* Cor do texto do cabeçalho */
     padding: 20px;
-    border-radius: 8px;
+    background-color: #0044cc;
+    color: white;
 }
 
-/* Título do cabeçalho */
 header h1 {
     font-size: 36px;
     margin-bottom: 10px;
 }
 
-/* Texto do cabeçalho */
 header p {
     font-size: 18px;
-    color: #d3d3d3; /* Cor mais suave para o texto */
 }
 
 /* Estilo da seção de livros */
 .book-collection {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 20px;
-    justify-items: center;
-    margin-top: 20px;
+    padding: 20px;
 }
 
-/* Estilo individual dos livros */
 .book {
     background-color: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 250px;
-    height: 350px; /* Altura fixa para todos os livros */
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column; /* Organiza o conteúdo do livro em coluna */
-    justify-content: space-between;
-}
-
-/* Efeito de hover no livro */
-.book:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* Imagem da capa do livro */
-.book img {
-    width: 100%;
-    height: 180px; /* Garantindo que todas as imagens tenham a mesma altura */
-    object-fit: cover; /* Preenche a área sem distorcer */
-    border-bottom: 2px solid #f0f0f0;
-}
-
-/* Título do livro */
-.book h3 {
-    font-size: 18px;
-    color: #333;
-    margin: 15px 0 10px;
-}
-
-/* Botões de download e conteúdo */
-button {
-    background-color: #2E3B4E;
-    color: white;
-    border: none;
-    padding: 10px;
-    margin: 5px;
-    width: 100%;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-/* Alterando cor do botão de download e conteúdo */
-.download-btn {
-    background-color: #4CAF50; /* Verde para download */
-}
-
-.content-btn {
-    background-color: #2196F3; /* Azul para conteúdo */
-}
-
-/* Estilo do cadeado (livros bloqueados) */
-.locked {
-    position: relative;
-    background-color: #e0e0e0; /* Cor de fundo diferente para livros bloqueados */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     padding: 20px;
     border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
 }
 
-.locked .locked-message {
+.book img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.book h3 {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #333;
+}
+
+/* Estilo para os botões de download e conteúdo */
+.download-btn, .content-btn {
+    background-color: #0044cc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
     text-align: center;
 }
 
-/* Estilo do ícone de cadeado */
-.locked img {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 15px;
+.download-btn:hover, .content-btn:hover {
+    background-color: #003399;
 }
 
-/* Estilo do botão de WhatsApp */
-.whatsapp-button a {
+/* Estilo para o cadeado de livros bloqueados */
+.book .locked {
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.book .locked img {
+    opacity: 0.5;
+}
+
+/* Estilo para a mensagem de livros bloqueados */
+.book p {
+    font-size: 16px;
+    color: #d9534f;
+    margin-top: 10px;
+}
+
+/* Estilo para o botão flutuante do WhatsApp */
+.whatsapp-icon {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #25D366;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
-    padding: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #25D366;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
 
-.whatsapp-button img {
+.whatsapp-icon img {
     width: 40px;
     height: 40px;
 }
 
-/* Botões de contato com o suporte */
-.whatsapp-btn {
-    background-color: #25D366;
-    font-size: 14px;
-    color: white;
-    margin-top: 10px;
-    padding: 10px 20px;
-    width: 100%;
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .book-collection {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .book-collection {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    .whatsapp-icon {
+        width: 50px;
+        height: 50px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .whatsapp-icon img {
+        width: 30px;
+        height: 30px;
+    }
 }
