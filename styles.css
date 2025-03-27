@@ -129,13 +129,26 @@ header p {
     padding: 20px;
 }
 
-.locked-message p {
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
+.locked-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Estilo para o botão do WhatsApp */
+.locked-message p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #d9534f; /* Cor de aviso para o texto */
+}
+
+.locked-message img {
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+}
+
+/* Estilo do botão do WhatsApp */
 .whatsapp-button {
     position: fixed;
     bottom: 20px;
@@ -143,11 +156,10 @@ header p {
     background-color: #25d366;
     padding: 10px;
     border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
 .whatsapp-button img {
     width: 50px;
     height: 50px;
-    object-fit: contain;
 }
