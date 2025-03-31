@@ -45,7 +45,7 @@ header p {
     position: relative;
     width: 100%;
     max-width: 220px; /* Ajuste para garantir equilíbrio */
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease;
+    transition: transform 0.3s ease-in-out;
 }
 
 .book:hover {
@@ -61,7 +61,7 @@ header p {
 
 /* Efeito de opacidade para livros bloqueados */
 .book.locked {
-    opacity: 0.5; /* Deixa o livro mais "ofuscado" */
+    opacity: 0.4; /* Deixa o livro mais "ofuscado" */
     pointer-events: none; /* Desativa a interação com livros bloqueados */
 }
 
