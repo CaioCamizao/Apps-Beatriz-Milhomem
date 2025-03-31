@@ -6,14 +6,18 @@
     <title>Livraria Digital</title>
     <link rel="stylesheet" href="styles.css">
     <script>
-        // Função para exibir o resumo abaixo do botão
-        function showResumo(id) {
-            var resumo = document.getElementById(id);
-            if (resumo.style.display === "none") {
-                resumo.style.display = "block"; // Exibe o resumo
-            } else {
-                resumo.style.display = "none"; // Oculta o resumo
-            }
+        // Função para abrir o pop-up com o resumo
+        function openPopup(resumo) {
+            var popup = document.getElementById("popup");
+            var content = document.getElementById("popup-content");
+            content.textContent = resumo; // Adiciona o resumo ao pop-up
+            popup.style.display = "flex"; // Exibe o pop-up
+        }
+
+        // Função para fechar o pop-up
+        function closePopup() {
+            var popup = document.getElementById("popup");
+            popup.style.display = "none"; // Oculta o pop-up
         }
     </script>
 </head>
@@ -33,12 +37,9 @@
                     <h3>Aprender a fazer makes incríveis mesmo sem experiência</h3>
                 </a>
                 <p>Descubra técnicas fáceis e passo a passo para se maquiar sozinha, mesmo que você nunca tenha pegado em um pincel antes.</p>
-                <a href="javascript:void(0)" onclick="showResumo('resumo1')">
+                <a href="javascript:void(0)" onclick="openPopup('Este ebook é ideal para iniciantes, desmistificando a maquiagem com dicas simples e práticas. Aprenda a criar looks incríveis usando produtos acessíveis e técnicas fáceis, mesmo sem experiência prévia.')">
                     <button class="content-btn">Ver o Conteúdo</button>
                 </a>
-                <div id="resumo1" class="resumo" style="display:none;">
-                    <p>Resumo: Este ebook é ideal para iniciantes, desmistificando a maquiagem com dicas simples e práticas. Aprenda a criar looks incríveis usando produtos acessíveis e técnicas fáceis, mesmo sem experiência prévia.</p>
-                </div>
             </div>
 
             <!-- Livro 2 -->
@@ -48,12 +49,9 @@
                     <h3>Fazer a maquiagem durar o dia todo</h3>
                 </a>
                 <p>Dicas essenciais para evitar que sua maquiagem derreta, transfira ou desapareça ao longo do dia, deixando sua pele impecável por horas.</p>
-                <a href="javascript:void(0)" onclick="showResumo('resumo2')">
+                <a href="javascript:void(0)" onclick="openPopup('Este guia ensina como fazer sua maquiagem durar o dia inteiro, abordando técnicas de aplicação, escolha de produtos e cuidados com a pele para evitar derretimento e transferência. Ideal para quem quer maquiagem impecável o dia todo.')">
                     <button class="content-btn">Ver o Conteúdo</button>
                 </a>
-                <div id="resumo2" class="resumo" style="display:none;">
-                    <p>Resumo: Este guia ensina como fazer sua maquiagem durar o dia inteiro, abordando técnicas de aplicação, escolha de produtos e cuidados com a pele para evitar derretimento e transferência. Ideal para quem quer maquiagem impecável o dia todo.</p>
-                </div>
             </div>
 
             <!-- Livro 3 -->
@@ -186,6 +184,14 @@
 
         </section>
     </main>
+
+    <!-- Pop-up -->
+    <div id="popup" class="popup">
+        <div id="popup-content" class="popup-content">
+            <p id="popup-text"></p>
+            <button class="close-btn" onclick="closePopup()">Fechar</button>
+        </div>
+    </div>
 
     <a href="https://wa.me/5511986724296" target="_blank">
         <img src="images/whatsapp.png" alt="WhatsApp" class="whatsapp-icon">
