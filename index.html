@@ -6,9 +6,14 @@
     <title>Livraria Digital</title>
     <link rel="stylesheet" href="styles.css">
     <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('service-worker.js')
-                .then(() => console.log("Service Worker Registrado"));
+        // Função para exibir o resumo abaixo do botão
+        function showResumo(id) {
+            var resumo = document.getElementById(id);
+            if (resumo.style.display === "none") {
+                resumo.style.display = "block"; // Exibe o resumo
+            } else {
+                resumo.style.display = "none"; // Oculta o resumo
+            }
         }
     </script>
 </head>
@@ -28,13 +33,12 @@
                     <h3>Aprender a fazer makes incríveis mesmo sem experiência</h3>
                 </a>
                 <p>Descubra técnicas fáceis e passo a passo para se maquiar sozinha, mesmo que você nunca tenha pegado em um pincel antes.</p>
-                <p class="book-summary">Resumo: Este ebook é ideal para iniciantes, desmistificando a maquiagem com dicas simples e práticas. Aprenda a criar looks incríveis usando produtos acessíveis e técnicas fáceis, mesmo sem experiência prévia.</p>
-                <a href="https://raw.githubusercontent.com/CaioCamizao/Apps-Beatriz-Milhomem/main/Ebooks/Aprenda-Makes-Incriveis-Mesmo-Sem-Experiencia.pdf" download>
-                    <button class="download-btn">Baixar PDF</button>
-                </a>
-                <a href="https://raw.githubusercontent.com/CaioCamizao/Apps-Beatriz-Milhomem/main/Ebooks/Aprenda-Makes-Incriveis-Mesmo-Sem-Experiencia.pdf" target="_blank">
+                <a href="javascript:void(0)" onclick="showResumo('resumo1')">
                     <button class="content-btn">Ver o Conteúdo</button>
                 </a>
+                <div id="resumo1" class="resumo">
+                    <p>Resumo: Este ebook é ideal para iniciantes, desmistificando a maquiagem com dicas simples e práticas. Aprenda a criar looks incríveis usando produtos acessíveis e técnicas fáceis, mesmo sem experiência prévia.</p>
+                </div>
             </div>
 
             <!-- Livro 2 -->
@@ -44,13 +48,12 @@
                     <h3>Fazer a maquiagem durar o dia todo</h3>
                 </a>
                 <p>Dicas essenciais para evitar que sua maquiagem derreta, transfira ou desapareça ao longo do dia, deixando sua pele impecável por horas.</p>
-                <p class="book-summary">Resumo: Este guia ensina como fazer sua maquiagem durar o dia inteiro, abordando técnicas de aplicação, escolha de produtos e cuidados com a pele para evitar derretimento e transferência. Ideal para quem quer maquiagem impecável o dia todo.</p>
-                <a href="https://raw.githubusercontent.com/CaioCamizao/Apps-Beatriz-Milhomem/main/Ebooks/Como-Fazer-sua-Maquiagem-Durar-o-Dia-Todo.pdf" download>
-                    <button class="download-btn">Baixar PDF</button>
-                </a>
-                <a href="https://raw.githubusercontent.com/CaioCamizao/Apps-Beatriz-Milhomem/main/Ebooks/Como-Fazer-sua-Maquiagem-Durar-o-Dia-Todo.pdf" target="_blank">
+                <a href="javascript:void(0)" onclick="showResumo('resumo2')">
                     <button class="content-btn">Ver o Conteúdo</button>
                 </a>
+                <div id="resumo2" class="resumo">
+                    <p>Resumo: Este guia ensina como fazer sua maquiagem durar o dia inteiro, abordando técnicas de aplicação, escolha de produtos e cuidados com a pele para evitar derretimento e transferência. Ideal para quem quer maquiagem impecável o dia todo.</p>
+                </div>
             </div>
 
             <!-- Livro 3 -->

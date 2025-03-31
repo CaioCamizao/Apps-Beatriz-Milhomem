@@ -115,6 +115,33 @@ header p {
     height: 40px;
 }
 
+/* Estilo para o resumo */
+.resumo {
+    display: none;
+    margin-top: 10px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1.1em;
+}
+
+/* Estilo para os livros bloqueados */
+.locked-download {
+    margin-top: 10px;
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.locked-download img {
+    width: 20px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
 /* Responsividade para telas menores */
 @media (max-width: 1024px) {
     .book-collection {
